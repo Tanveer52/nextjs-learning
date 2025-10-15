@@ -1,18 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import useSWR from "swr";
+
+async function fetchDashboardData() {
+  const res = await fetch("http://localhost:4000/dashboard");
+  const data = await res.json();
+  return data;
+}
 
 export default function Dashboard() {
-  const [d, setD] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("http://localhost:4000/dashboard")
-      .then((raw) => raw.json())
-      .then((data) => {
-        setD(data);
-        setIsLoading(false);
-      });
-  }, []);
+  const { data, error } = useSWR("dashboard", fetchDashboardData);
 
   const styles = {
     page: {
@@ -61,7 +58,9 @@ export default function Dashboard() {
     smallMuted: { fontSize: 12, color: "#6b7280" },
   };
 
-  if (isLoading) return <h1>Loading........</h1>;
+  if (!data) return <h1>Loading........</h1>;
+
+  if (error) return <h1>{error}</h1>;
 
   return (
     <div style={styles.page}>
@@ -82,27 +81,27 @@ export default function Dashboard() {
         <div style={styles.statsRow}>
           <div style={styles.statCard}>
             <div style={styles.statLabel}>Total Users</div>
-            <div style={styles.statNumber}>{d.totalUsers}</div>
+            <div style={styles.statNumber}>{data.totalUsers}</div>
           </div>
 
           <div style={styles.statCard}>
             <div style={styles.statLabel}>Active Users</div>
-            <div style={styles.statNumber}>{d.activeUsers}</div>
+            <div style={styles.statNumber}>{data.activeUsers}</div>
           </div>
 
           <div style={styles.statCard}>
             <div style={styles.statLabel}>New Today</div>
-            <div style={styles.statNumber}>{d.newUsersToday}</div>
+            <div style={styles.statNumber}>{data.newUsersToday}</div>
           </div>
 
           <div style={styles.statCard}>
             <div style={styles.statLabel}>Total Posts</div>
-            <div style={styles.statNumber}>{d.totalPosts}</div>
+            <div style={styles.statNumber}>{data.totalPosts}</div>
           </div>
 
           <div style={styles.statCard}>
             <div style={styles.statLabel}>Total News</div>
-            <div style={styles.statNumber}>{d.totalNews}</div>
+            <div style={styles.statNumber}>{data.totalNews}</div>
           </div>
         </div>
 
@@ -112,9 +111,9 @@ export default function Dashboard() {
             Recent Activities
           </div>
 
-          {Array.isArray(d.recentActivities) &&
-          d.recentActivities.length > 0 ? (
-            d.recentActivities.map((act) => (
+          {Array.isArray(data.recentActivities) &&
+          data.recentActivities.length > 0 ? (
+            data.recentActivities.map((act) => (
               <div key={act.id} style={styles.listItem}>
                 <div>{act.activity}</div>
                 <div style={styles.smallMuted}>
