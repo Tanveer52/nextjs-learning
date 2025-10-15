@@ -1,0 +1,146 @@
+{
+  "posts": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "..🐒 aadgasd sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      "userId": 1,
+      "id": 5,
+      "title": "nesciunt quas odio",
+      "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+    },
+    {
+      "userId": 1,
+      "id": 6,
+      "title": "dolorem eum magni eos aperiam quia",
+      "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+    },
+    {
+      "userId": 1,
+      "id": 7,
+      "title": "magnam facilis autem",
+      "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+    },
+    {
+      "userId": 1,
+      "id": 8,
+      "title": "dolorem dolore est ipsam",
+      "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+    },
+    {
+      "userId": 1,
+      "id": 9,
+      "title": "nesciunt iure omnis dolorem tempora et accusantium",
+      "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+    },
+    {
+      "userId": 1,
+      "id": 10,
+      "title": "optio molestias id quia eum",
+      "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "headline": "🤖 AI Revolutionizes Flutter Development",
+      "content": "Developers are integrating AI agents to speed up Flutter app development and improve code quality.",
+      "author": "Tech Today",
+      "publishedAt": "2025-10-09T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "headline": "⚡ Next.js 15 Released with Built-in AI Features",
+      "content": "The Next.js team introduced AI-powered routing and data prefetching features to enhance app performance.",
+      "author": "Dev Weekly",
+      "publishedAt": "2025-10-08T15:30:00Z"
+    },
+    {
+      "id": 3,
+      "headline": "☁️ Firebase Integrates Seamlessly with AI Agents",
+      "content": "Google announced new APIs allowing Firebase developers to easily connect with AI agents and automate workflows.",
+      "author": "Cloud Insider",
+      "publishedAt": "2025-10-07T12:45:00Z"
+    },
+    {
+      "id": 4,
+      "headline": "🧠 LangChain Launches Flutter SDK",
+      "content": "LangChain’s new Flutter SDK allows mobile developers to easily integrate AI reasoning and LLMs directly into apps.",
+      "author": "AI Weekly",
+      "publishedAt": "2025-10-06T09:20:00Z"
+    },
+    {
+      "id": 5,
+      "headline": "🪄 Dart 3.5 Introduces Built-in AI Assistance",
+      "content": "The Dart team has unveiled an AI-powered code suggestion tool to accelerate Flutter development productivity.",
+      "author": "Tech Today",
+      "publishedAt": "2025-10-05T08:15:00Z"
+    },
+    {
+      "id": 6,
+      "headline": "🌍 Edge AI Expands: Google Cloud Launches Local AI Compute",
+      "content": "Google Cloud introduced new edge computing solutions, allowing businesses to deploy AI models closer to their users.",
+      "author": "Cloud Insider",
+      "publishedAt": "2025-10-04T11:00:00Z"
+    },
+    {
+      "id": 7,
+      "headline": "🧩 FastAPI Integrates with LangChain for Seamless AI APIs",
+      "content": "FastAPI developers can now create LLM-powered APIs using LangChain integration for advanced reasoning workflows.",
+      "author": "Dev Weekly",
+      "publishedAt": "2025-10-03T14:25:00Z"
+    },
+    {
+      "id": 8,
+      "headline": "💡 Flutter 4.0 Sneak Peek: Native AI Widgets Announced",
+      "content": "Flutter 4.0 preview introduces new AI-ready widgets for predictive UI and user behavior personalization.",
+      "author": "Tech Today",
+      "publishedAt": "2025-10-02T16:50:00Z"
+    }
+  ],
+  "dashboard": {
+    "totalUsers": 12450,
+    "activeUsers": 9375,
+    "newUsersToday": 145,
+    "totalPosts": 10,
+    "totalNews": 8,
+    "recentActivities": [
+      {
+        "id": 1,
+        "activity": "New user registered",
+        "timestamp": "2025-10-14T10:45:00Z"
+      },
+      {
+        "id": 2,
+        "activity": "Post added by user #12",
+        "timestamp": "2025-10-14T09:30:00Z"
+      },
+      {
+        "id": 3,
+        "activity": "News article updated",
+        "timestamp": "2025-10-14T08:50:00Z"
+      }
+    ]
+  }
+}
