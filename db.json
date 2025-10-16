@@ -142,5 +142,127 @@
         "timestamp": "2025-10-14T08:50:00Z"
       }
     ]
-  }
+  },
+  "events": [
+    {
+      "id": 1,
+      "title": "Flutter Global Summit 2025",
+      "description": "A premier conference for Flutter developers featuring keynotes and workshops.",
+      "date": "2025-11-12",
+      "location": "San Francisco, USA",
+      "category": "Conference"
+    },
+    {
+      "id": 2,
+      "title": "AI in Mobile Development Webinar",
+      "description": "Online session exploring how AI is transforming cross-platform app development.",
+      "date": "2025-11-05",
+      "location": "Online",
+      "category": "Webinar"
+    },
+    {
+      "id": 3,
+      "title": "Firebase Dev Day Lahore",
+      "description": "Hands-on Firebase workshop with live coding and demos.",
+      "date": "2025-11-20",
+      "location": "Lahore, Pakistan",
+      "category": "Workshop"
+    },
+    {
+      "id": 4,
+      "title": "FastAPI + LangChain Integration Hackathon",
+      "description": "Develop LLM-powered APIs in a 48-hour coding challenge.",
+      "date": "2025-12-01",
+      "location": "Berlin, Germany",
+      "category": "Hackathon"
+    },
+    {
+      "id": 5,
+      "title": "Tech Today Live: AI & Cloud",
+      "description": "Panel discussions on cloud-based AI and edge computing advancements.",
+      "date": "2025-11-15",
+      "location": "New York, USA",
+      "category": "Conference"
+    },
+    {
+      "id": 6,
+      "title": "Dart 3.5 Launch Meetup",
+      "description": "A meetup to explore Dart 3.5’s new AI assistance features.",
+      "date": "2025-10-25",
+      "location": "London, UK",
+      "category": "Meetup"
+    },
+    {
+      "id": 7,
+      "title": "LangChain Flutter SDK Demo Day",
+      "description": "Live demos and developer talks introducing LangChain SDK for Flutter.",
+      "date": "2025-11-10",
+      "location": "San Francisco, USA",
+      "category": "Demo"
+    },
+    {
+      "id": 8,
+      "title": "Flutter Karachi Meetup",
+      "description": "A community meetup for local Flutter developers.",
+      "date": "2025-11-08",
+      "location": "Karachi, Pakistan",
+      "category": "Meetup"
+    },
+    {
+      "id": 9,
+      "title": "Google Cloud Edge AI Workshop",
+      "description": "Interactive workshop on deploying AI models at the edge using GCP.",
+      "date": "2025-11-18",
+      "location": "Singapore",
+      "category": "Workshop"
+    },
+    {
+      "id": 10,
+      "title": "AI-Powered App Design Bootcamp",
+      "description": "Learn how to use AI tools for UX/UI design in Flutter apps.",
+      "date": "2025-12-05",
+      "location": "Toronto, Canada",
+      "category": "Bootcamp"
+    },
+    {
+      "id": 11,
+      "title": "Startup Pitch: AI Mobile Solutions",
+      "description": "Startups present AI-integrated mobile solutions to investors.",
+      "date": "2025-12-15",
+      "location": "Dubai, UAE",
+      "category": "Startup"
+    },
+    {
+      "id": 12,
+      "title": "Open Source Flutter Sprint",
+      "description": "Global collaboration event to contribute to open source Flutter packages.",
+      "date": "2025-11-22",
+      "location": "Online",
+      "category": "Hackathon"
+    },
+    {
+      "id": 13,
+      "title": "Cloud Dev Conference 2025",
+      "description": "Conference covering the latest in serverless, AI, and cloud-native development.",
+      "date": "2025-11-30",
+      "location": "Tokyo, Japan",
+      "category": "Conference"
+    },
+    {
+      "id": 14,
+      "title": "Women in Tech: Flutter Edition",
+      "description": "Empowering women developers in the Flutter ecosystem.",
+      "date": "2025-12-12",
+      "location": "Berlin, Germany",
+      "category": "Community"
+    },
+    {
+      "id": 15,
+      "title": "AI & Flutter HackFest",
+      "description": "48-hour hackathon focusing on building AI-powered Flutter apps.",
+      "date": "2025-12-20",
+      "location": "Lahore, Pakistan",
+      "category": "Hackathon"
+    }
+  ]
 }
