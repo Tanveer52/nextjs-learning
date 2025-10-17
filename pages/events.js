@@ -1,14 +1,31 @@
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 
 function EventsPage({ data }) {
+  const router = useRouter();
+
   const [events, setEvents] = useState(data);
+  const [availableCategories, setAvailableCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  useEffect(() => {
+    const categories = events.map((category) => category.category);
+    const uinqueCategories = [...new Set(categories)];
+
+    setAvailableCategories(uinqueCategories);
+    if (uinqueCategories.length == 1) setSelectedCategory(uinqueCategories[0]);
+  }, []);
 
   async function fetchEventsByCategory(category) {
-    const res = await fetch(
-      `http://localhost:4000/events?category=${category}`
-    );
+    const queryString = category ? `category=${category}` : "";
+    const res = await fetch(`http://localhost:4000/events?${queryString}`);
     const data = await res.json();
     setEvents(data);
+    router.push(
+      queryString.length == 0 ? "/events" : `/events?category=${category}`,
+      undefined,
+      { shallow: true }
+    );
   }
 
   return (
@@ -23,6 +40,22 @@ function EventsPage({ data }) {
         margin: "40px auto",
       }}
     >
+      <button
+        onClick={() => {
+          fetchEventsByCategory("");
+          setSelectedCategory("");
+        }}
+        style={{
+          marginBottom: "20px",
+          marginRight: "5px",
+          padding: "5px",
+          borderRadius: "5px",
+          backgroundColor: "#9d0208",
+          cursor: "pointer",
+        }}
+      >
+        Reset
+      </button>
       <h2
         style={{
           textAlign: "center",
@@ -32,14 +65,31 @@ function EventsPage({ data }) {
         }}
       >
         Upcoming Events
+        {selectedCategory.length != 0 && `For ${selectedCategory}`}
       </h2>
 
-      <button
-        onClick={() => fetchEventsByCategory("Hackathon")}
-        style={{ marginBottom: "20px" }}
-      >
-        Filter Events
-      </button>
+      {events && availableCategories && availableCategories.length > 0 ? (
+        availableCategories.map((category) => (
+          <button
+            onClick={() => {
+              fetchEventsByCategory(category);
+              setSelectedCategory(category);
+            }}
+            style={{
+              marginBottom: "20px",
+              marginRight: "5px",
+              padding: "5px",
+              borderRadius: "5px",
+              backgroundColor: "#14213d",
+              cursor: "pointer",
+            }}
+          >
+            {category}
+          </button>
+        ))
+      ) : (
+        <p>No Categories Available</p>
+      )}
 
       {events && events.length > 0 ? (
         events.map((event, index) => (
@@ -87,8 +137,11 @@ function EventsPage({ data }) {
 
 export default EventsPage;
 
-export async function getServerSideProps() {
-  const res = await fetch("http://localhost:4000/events");
+export async function getServerSideProps(context) {
+  const { query } = context;
+  const { category } = query;
+  const queryString = category ? `category=${category}` : "";
+  const res = await fetch(`http://localhost:4000/events?${queryString}`);
   const events = await res.json();
 
   return {
