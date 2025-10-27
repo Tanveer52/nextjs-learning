@@ -12,6 +12,7 @@ export default function About() {
         <link ref="icon" href="www.google.com" />
       </Head>
       <h1>About Page</h1>
+      <p>{process.env.NEXT_PUBLIC_DB_USER}</p>
     </>
   );
 }
